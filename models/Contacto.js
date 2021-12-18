@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 const {Schema} = mongoose;
 
-const contactoSchema = new Schema({
-    tipo: String,
+const contactoSchema = new Schema(
+    
+{
     documento: {
         type: String,
         trim: true,
@@ -23,7 +24,7 @@ const contactoSchema = new Schema({
         type: String,
         trim: true,
         require: true
-      },
+    },
     telefono: {
         type: String,
         maxLength: 11
@@ -32,7 +33,10 @@ const contactoSchema = new Schema({
         type: String,
         require: true
     }
-},
+}
+
+
+,
 {timestamps: true}
 );
 module.exports = mongoose.model('Contacto', contactoSchema);

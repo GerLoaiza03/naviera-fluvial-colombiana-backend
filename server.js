@@ -18,6 +18,7 @@ app.use('/api/naviera',require('./routes/cliente'));
 app.use('/api/naviera',require('./routes/contacto'));
 app.use('/api/naviera',require('./routes/barco'));
 app.use('/api/naviera',require('./routes/ruta'));
+app.use('/api/naviera',require('./routes/puerto'));
 
 
 // Static Files

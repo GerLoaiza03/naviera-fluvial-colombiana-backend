@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const {Schema} = mongoose;
 
-const rutaSchema = new Schema(
+const puertoSchema = new Schema(
     
 {
     nombre: {
@@ -9,20 +9,33 @@ const rutaSchema = new Schema(
         maxLength: 50,
         require: true
     },
-    puertoorigen: {
+    pais: {
         type: String,
         maxLength: 40,
         require: true
     },
-    puertodestino: {
+    ciudad: {
         type: String,
         maxLength: 40,
         require: true
     },
-    distancia: Number,
-    tiempo: Number,
-    frecuencia: {
+    direccion: {
         type: String,
+        maxLength: 40,
+        require: true
+    },
+    telefono: {
+        type: number,
+        maxLength: 50,
+        require: true
+    },
+    capacidad: {
+        type: number,
+        maxLength: 10,
+        require: true
+    },   
+    tarifa: {
+        type: number,
         maxLength: 50,
         require: true
     },
@@ -33,4 +46,4 @@ const rutaSchema = new Schema(
 {timestamps: true}
 );
 
-module.exports = mongoose.model('Ruta', rutaSchema);
+module.exports = mongoose.model('Puerto', puertoSchema);

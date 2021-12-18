@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 const {Schema} = mongoose;
 
-const clienteSchema = new Schema({
-    tipo: String,
+const clienteSchema = new Schema(
+
+{
     documento: {
         type: String,
         trim: true,
@@ -23,7 +24,7 @@ const clienteSchema = new Schema({
         type: String,
         trim: true,
         require: true
-      },
+    },
     telefono: {
         type: String,
         maxLength: 11
@@ -41,7 +42,9 @@ const clienteSchema = new Schema({
         type: Number,
         default: 1
     }
-},
+}
+
+,
 {timestamps: true}
 );
 module.exports = mongoose.model('Cliente', clienteSchema);

@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 const {Schema} = mongoose;
 
-const barcoSchema = new Schema({
+const barcoSchema = new Schema(
+    
+    {
     nombre: {
         type: String,
         maxLength: 50,
@@ -15,7 +17,7 @@ const barcoSchema = new Schema({
     capacidad: {
         type: Number,
         require: true
-      },
+    },
     rutas: {
         type: Array,
         default: []
@@ -26,7 +28,9 @@ const barcoSchema = new Schema({
         require: true
     },
     imgUrl: String
-},
+}
+
+,
 {timestamps: true}
 );
 
