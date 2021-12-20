@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const URI = 'mongodb://frank:hola@127.0.0.1/NavieraFluvial';
+// const URI = 'mongodb://frank:hola@127.0.0.1/NavieraFluvial';
+const URI = 'mongodb://127.0.0.1/NavieraFluvial';
 
 mongoose
 	.connect(URI)
