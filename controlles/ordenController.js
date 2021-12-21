@@ -13,10 +13,10 @@ module.exports.get_Orden =  async (req, res) => {
     res.json(orden);
 };
 
-module.exports.get_Orden =  async (req, res) => {
-    const orden = await Orden.findById(req.params.id);
-    res.json(orden);
-};
+// module.exports.get_Orden =  async (req, res) => {
+//     const orden = await Orden.findById(req.params.id);
+//     res.json(orden);
+// };
 
 
 //Crear orden
